@@ -11,7 +11,8 @@ def set_meta(parent_page_url_or_id):
     tagsArray = []
     if row.milestones:
       duration = datetime.datetime.now(tz=pytz.utc) - row.updated.replace(tzinfo=pytz.utc)
-      if duration.total_seconds() <= 120:
+      if (not row.goals or not row.tags):
+      # if (duration.total_seconds() <= 120) and (not row.goals or not row.tags):
         print('Updating: ' + row.name)
 
         goalsIdArray = []
