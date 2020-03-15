@@ -3,7 +3,7 @@ import pytz
 from notion.client import NotionClient
 
 client = NotionClient(
-    token_v2="fcbde2a33d8d564986e867ea99872ec082b6581f523bb8433eadf3d954256a6cd1bf84da5da8db62c1333ce74b7b4b33841dc4c75d6a5c5af45ff7ae25ce34d1bf042e05417caa7a6610b3e04413")
+    token_v2="ef1861814ee0cec302083947747eedcf568865ac519fd7f7e492c184062fec934bf610a73fc2fd2e24c9c0901169ad4646db6a1fee7d21c9102cdadacf364b8ee59fa3ad52cf1eb99037e1527b5e")
 pst = pytz.timezone('US/Pacific')
 today = pst.localize(datetime.datetime.today()).date()
 cv = client.get_collection_view(
